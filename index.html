@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Love Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div id="game-scaler">
+        <div id="game-viewport">
+            <!-- Intro Screen -->
+            <div id="intro-screen">
+                <div id="intro-content">
+                    <p id="intro-text"></p>
+                    <p id="intro-question" style="display: none; opacity: 0;">Do you want to start and discover it?</p>
+                    <div id="intro-buttons" style="display: none; opacity: 0;">
+                        <button id="intro-yes-btn">Yes</button>
+                        <button id="intro-yes-red-btn" class="red-button">Also Yes</button>
+                    </div>
+                    <img id="intro-asset" src="" alt="">
+                </div>
+            </div>
+
+            <canvas id="game-bg" style="z-index: 0;"></canvas>
+            <canvas id="game-fg" style="z-index: 2;"></canvas>
+            <canvas id="game-girl" style="z-index: 4;"></canvas>
+
+            <div id="ui">
+                <div id="debug-log"
+                    style="position:absolute; top:0; left:0; color:lime; background:rgba(0,0,0,0.8); padding:10px; font-size:12px; pointer-events:none; z-index:9999; max-height:200px; overflow:auto; display:none;">
+                </div>
+
+                <!-- Arcade Dialogue Box -->
+                <div id="dialogue-container" style="display: none;">
+                    <div id="dialogue-box">
+                        <div id="dialogue-name">HIBA</div>
+                        <div id="dialogue-content">
+                            <div id="dialogue-portrait">
+                                <img src="images/background/girl/portrait.png" alt="Hiba">
+                            </div>
+                            <div id="dialogue-text"></div>
+                        </div>
+                        <button id="dialogue-skip-btn" class="skip-btn small">Skip</button>
+                    </div>
+                </div>
+
+                <button id="startBtn" style="display:none;">Let's Go ❤️</button>
+                <div id="controls" style="display:none; margin-top: 20px;">
+                    <button id="leftBtn"><img src="images/assets/arrows/left.png" alt="Left"></button>
+                    <button id="rightBtn"><img src="images/assets/arrows/right.png" alt="Right"></button>
+                </div>
+
+            </div>
+
+            <!-- Skip button lives directly in game-viewport so it's always inside the cadre -->
+            <button id="intro-skip-btn" class="skip-btn">Skip Intro</button>
+
+            <!-- Transition Overlay: direct child of game-viewport so it covers everything -->
+            <div id="scene-transition-overlay"
+                style="position:absolute; top:0; left:0; width:100%; height:100%; background:black; opacity:0; pointer-events:none; z-index:10000; transition: opacity 4s ease-in-out;">
+            </div>
+        </div>
+    </div>
+
+    <script src="intro.js"></script>
+    <script src="script.js"></script>
+    <script src="dialogue.js"></script>
+    <script src="controls.js"></script>
+    <script src="scene3.js"></script>
+    <script src="scene4.js"></script>
+    <script src="bios-window.js"></script>
+    <script src="disk-window.js"></script>
+    <script src="regrets-window.js"></script>
+    <script src="temp-window.js"></script>
+    <script src="trauma-window.js"></script>
+    <script src="dev-tools.js"></script>
+    <script src="memories-folder.js"></script>
+
+</body>
+
+</html>
