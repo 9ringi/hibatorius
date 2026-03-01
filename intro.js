@@ -204,8 +204,8 @@ if (yesBtn) yesBtn.addEventListener('click', startGame);
 if (yesRedBtn) yesRedBtn.addEventListener('click', startGame);
 if (skipBtn) skipBtn.addEventListener('click', startGame);
 
-// Start intro when all assets (images/gifs) are loaded
-window.addEventListener('load', () => {
+// Start intro when all assets (images/gifs/audio) are heavily preloaded
+window.addEventListener('assetsLoaded', () => {
     // Show skip button immediately from the very first frame
     if (skipBtn) skipBtn.style.display = "block";
 
